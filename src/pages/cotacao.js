@@ -5,7 +5,7 @@ export default function Home() {
   const { data, error, isLoading } = useSWR(
     'https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL?token=927c456f9a4bec44887e5cc0e2d154c8f843f33855ec2ec0d15db596ee7d19cd',
     fetcher,
-    { refreshInterval: 5000 } // Atualiza a cada 60s //1000 == 1 segundo refresh page
+    { refreshInterval: 3000 } // Atualiza a cada 60s //1000 == 1 segundo refresh page
   );
 
   if (error) return <div>Erro ao carregar dados.</div>;
